@@ -13,3 +13,5 @@ ENV PORT 8501
 
 # Comando para executar a aplicação
 CMD ["python", "-m", "streamlit", "run", "app.py"]
+
+RUN echo $PATH
