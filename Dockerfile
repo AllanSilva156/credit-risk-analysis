@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM python:3.10.9-slim
 
 RUN pip install virtualenv
 ENV VIRTUAL_ENV=/venv
