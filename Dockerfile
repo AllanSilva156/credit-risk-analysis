@@ -12,4 +12,4 @@ RUN pip install -r requirements.txt
 ENV PORT 8501
 
 # Comando para executar a aplicação
-CMD ["streamlit", "run", "app.py"]
+CMD ["python", "-m", "streamlit", "run", "app.py"]
