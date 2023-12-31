@@ -9,8 +9,12 @@ RUN apt-get update && apt-get install -y \
 
 RUN git clone https://github.com/streamlit/streamlit-example.git
 
+WORKDIR /app
+
+COPY . .
+
 RUN pip install -r requirements.txt
 
-ENV PORT 8501
+EXPOSE 8501
 
 ENTRYPOINT ["streamlit", "run", "app/app.py"]
