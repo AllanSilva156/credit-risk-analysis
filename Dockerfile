@@ -1,5 +1,7 @@
 FROM python:3.10-slim
 
+RUN git clone https://github.com/streamlit/streamlit-example.git .
+
 WORKDIR /app
 
 COPY . .
