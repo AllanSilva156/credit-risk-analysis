@@ -8,7 +8,7 @@ import numpy as np
 EXPERIMENT_NAME = 'dataset completo'
 
 # Carregando o pipeline já salvo
-model = load_model(f'../pipelines/{EXPERIMENT_NAME}_pipeline', verbose=False)
+model = load_model(f'./pipelines/{EXPERIMENT_NAME}_pipeline', verbose=False)
 
 def predict(model, input_df):
     predictions_df = predict_model(estimator=model, data=input_df)
@@ -16,7 +16,7 @@ def predict(model, input_df):
     return predictions
 
 def run():
-    image = Image.open('../img/logo.png')
+    image = Image.open('./img/logo.png')
 
     st.sidebar.image(image)
 
