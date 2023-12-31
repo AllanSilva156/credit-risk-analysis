@@ -1,16 +1,11 @@
 FROM python:3.10-slim
 
-COPY ./requirements.txt /usr/requirements.txt
+WORKDIR /app
 
-WORKDIR /usr
+COPY . .
 
 RUN pip install -r requirements.txt
 
-COPY ./app /usr/app
-COPY ./pipelines /usr/pipelines
+EXPOSE 8501
 
-ENV PORT 8501
-
-ENTRYPOINT ["python3"]
-
-CMD ["streamlit", "run", "app/app.py"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
