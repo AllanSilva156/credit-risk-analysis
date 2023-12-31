@@ -1,17 +1,16 @@
 FROM python:3.10-slim
 
-WORKDIR /app
+COPY ./requirements.txt /usr/requirements.txt
 
-# Copiar todos os arquivos para /app
-COPY . .
+WORKDIR /usr
 
-# Instalar dependências
 RUN pip install -r requirements.txt
 
-# Definir a porta
+COPY ./app /usr/app
+COPY ./pipelines /usr/pipelines
+
 ENV PORT 8501
 
-# Comando para executar a aplicação
-CMD ["python", "-m", "streamlit", "run", "app.py"]
+ENTRYPOINT ["python3"]
 
-RUN echo $PATH
+CMD ["streamlit", "run", "app/app.py"]
