@@ -1,10 +1,17 @@
 FROM python:3.10-slim
 
-WORKDIR /app
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    software-properties-common \
+    git \
+    && rm -rf /var/lib/apt/lists/*
 
-COPY . /app
+RUN git clone https://github.com/AllanSilva156/credit-risk-analysis.git
 
-RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
+WORKDIR /credit-risk-analysis
+
+RUN pip install -r requirements.txt
 
 EXPOSE 8501
 
