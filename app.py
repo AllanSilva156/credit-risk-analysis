@@ -24,7 +24,7 @@ def run():
     'Selecione o tipo de previsão:',
     ('Online', 'Batch'))
 
-    st.sidebar.info('Esta aplicação foi criada para prever a liberação de crédito para clientes de uma instituição financeira')
+    st.sidebar.info('Esta aplicação foi criada para simular a previsão da liberação de crédito para clientes de uma instituição financeira')
 
     st.title("Análise de Risco de Crédito")
 
