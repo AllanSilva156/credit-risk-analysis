@@ -1,9 +1,15 @@
 FROM python:3.10-slim
 
-COPY . .
+WORKDIR /app
 
-RUN pip install -r requirements.txt
+COPY requirements.txt /app/requirements.txt
+
+COPY app.py /app/app.py
+
+COPY /pipelines /app/pipelines
+
+RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
 EXPOSE 8501
 
-ENTRYPOINT ["streamlit", "run", "app/app.py"]
+CMD ["streamlit", "run", "/app/app.py"]
