@@ -12,7 +12,7 @@ Este projeto trata da implantação de um modelo preditivo de análise de risco 
 
 A **StructML** é uma arquitetura de MLOps inspirada na arquitetura Delta, projetada para simplificar a implementação de modelos de Machine Learning em ambientes de produção. Ideal para cientistas de dados e engenheiros com experiência limitada em MLOps, a StructML organiza os dados em três camadas - Bronze, Silver e Gold - otimizando o gerenciamento de dados desde a coleta até a análise. Com a integração de ferramentas como Vertex AI para desenvolvimento, PyCaret para automação e MLflow para rastreamento, a arquitetura facilita a aplicação prática de modelos de ML.
 
-<img src="../img/structml-gcp.png" width="800" height="450"/>
+<img src="./img/structml-gcp.png" width="800" height="450"/>
 
 Além disso, a StructML aproveita o Cloud Run para operações escaláveis e o Cloud Build para processos de integração e entrega contínuas. A arquitetura também incorpora o Streamlit para criar interfaces de usuário intuitivas, tornando-a versátil para várias aplicações de ML. Inspirada na robustez da arquitetura Delta, a StructML se destaca por sua capacidade de transformar projetos de pesquisa em soluções de ML eficazes e prontas para o mercado.
 
